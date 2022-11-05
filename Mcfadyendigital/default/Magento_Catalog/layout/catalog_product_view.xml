@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column_product" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="css/catalog_product_view.css"/>
+    </head>
+    <body>
+        <referenceBlock name="breadcrumbs" remove="true" />
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="product_details" before="-" template="Magento_Catalog::product_details.phtml" cacheable="true" />
+        </referenceContainer>
+            <move element="view.addto.wishlist" destination="product.info.media" before="-" />
+            <referenceBlock name="product.info.addto" remove="true"></referenceBlock>
+            <referenceBlock name="product.info.options.wrapper.bottom">
+                <block class="Magento\Framework\View\Element\Template" name="addtocart_info" after="-" template="Magento_Catalog::addtocart_info.phtml"></block>
+            </referenceBlock>
+            <referenceContainer name="content">
+                <block class="Magento\Framework\View\Element\Template" after="product.info.media" name="product-extra" template="Magento_Catalog::product_editor_info.phtml"/>
+            </referenceContainer>
+            <referenceBlock name="reviews.tab" remove="true"></referenceBlock>
+            <referenceBlock name="product.reviews.wrapper" remove="true"></referenceBlock>
+            <referenceBlock name="product.info.description" remove="true"></referenceBlock>
+            <referenceBlock name="product.info.sku" remove="true"></referenceBlock>
+    </body>
+</page>

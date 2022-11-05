@@ -1,0 +1,36 @@
+<div class="details_delivery">
+	<ul class="details_delivery_title">
+		<li class="active" data-id="details">DETAILS</li>	
+		<li data-id="delivery">DELIVERY</li>	
+		<li data-id="fit">FIT</li>	
+		<li data-id="share">SHARE</li>	
+	</ul>
+	<div class="details_delivery_data">
+		<div class="content" id="details">
+			<p>The Forte Lurex Linen Viscose Jacket in Mother of Pearl features lunar lavishness by night and by day: a blazer in a linen blend shot with lurex for a shimmering surface that shines like a star in the sky. it has a straight fit with well defined shoulders and a shawl collar culminating in a button and has been flawlessly finished with three jet pockets with a sartorial feel.
+			See the <a>EDITOR’S NOTE</a></p>
+			<p>Learn about the <a>DESIGNER</a></p>
+		</div>
+		<div style="display:none" class="content" id="delivery">Delivery content goes here</div>
+		<div style="display:none" class="content" id="fit">Fit content goes here</div>
+		<div style="display:none" class="content" id="share">Share content goes here</div>
+	</div>
+</div>
+<div class="desktop_product_images">
+	<?php 
+	//wishlist
+	echo $block->getLayout()->createBlock("Magento\Wishlist\Block\Catalog\Product\View\AddTo\Wishlist")->setTemplate('Magento_Wishlist::catalog/product/view/
+		addto/wishlist.phtml')->toHtml();
+	$blockObj= $block->getLayout()->createBlock('Magento\Catalog\Block\Product\View\Gallery');
+	
+	//images for desktop view
+	$imagejson = $blockObj->getGalleryImagesJson();
+	$images = (json_decode($imagejson));
+	foreach($images as $image)
+	{
+	?>
+	    <img src = "<?php echo $image->full; ?>" />
+	<?php
+	}
+	?>
+</div>

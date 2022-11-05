@@ -1,0 +1,105 @@
+.product-info-main{
+    .page-title span.base {
+        /* font-family: 'Roboto'; */
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 96%;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+        color: #000000;
+    }
+    .product-info-price .price-box .price-container .price {
+        
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: #000000;    
+    }
+    .product-add-form{
+        padding-top:0px;
+    }
+    .product-info-price {
+        border-bottom: none;
+        margin-bottom:15px;
+    }
+    .product-options-bottom .price-box, .product-info-price .price-box{
+        padding-bottom:0px;
+    }
+    .product-info-stock-sku {
+        display: none !important;
+    }
+    span.price-label
+    {
+        display: none !important;
+    }
+    .swatch-attribute-label{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: #000000;
+    }
+    .swatch-option {
+        &.image {
+            width: 52px !important;
+            height: 63px !important;
+            &.selected {
+                outline: 2px solid black;
+            }
+            &:not(.disabled):hover{
+                border: none;
+                outline: 2px solid black;
+            }
+        }
+        &.text {
+            background: #FFFFFF;
+            border: 1px solid #E5E5E5;
+            border-radius: 100px;
+            font-weight: 400;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #000000;
+            padding: 8px 30px;
+            line-height: normal;
+                &.selected
+                {
+                    outline: none;
+                    color: white !important;
+                    background-color: black !important;
+                    box-shadow:none;
+                }
+        }
+    }
+    &:focus{
+        box-shadow:none;
+    }
+    .field{
+        &.qty{
+            display: none;
+        }
+    }
+    .box-tocart{
+        .action{
+            &.tocart{
+                width:100%;
+            }
+        }
+    }
+    #product-addtocart-button{
+        background: #000000;
+        border-radius: 100px;
+    }
+    .addtocart_info{
+        p{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 120%;
+            color: #000000;
+        }
+    }
+}
