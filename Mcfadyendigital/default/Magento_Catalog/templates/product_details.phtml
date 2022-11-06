@@ -19,8 +19,7 @@
 <div class="desktop_product_images">
 	<?php 
 	//wishlist
-	echo $block->getLayout()->createBlock("Magento\Wishlist\Block\Catalog\Product\View\AddTo\Wishlist")->setTemplate('Magento_Wishlist::catalog/product/view/
-		addto/wishlist.phtml')->toHtml();
+	echo $block->getLayout()->createBlock("Magento\Wishlist\Block\Catalog\Product\View\AddTo\Wishlist")->setTemplate('Magento_Wishlist::catalog/product/view/addto/wishlist.phtml')->toHtml();
 	$blockObj= $block->getLayout()->createBlock('Magento\Catalog\Block\Product\View\Gallery');
 	
 	//images for desktop view
